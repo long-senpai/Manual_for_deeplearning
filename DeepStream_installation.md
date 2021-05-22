@@ -22,6 +22,27 @@ gstreamer1.0-libav \
 libgstrtspserver-1.0-0 \
 libjansson4=2.11-1 
 ```
+### Download the DeepStream SDK for jetson
+
+[NVIDIA Guide](deepstream-on-jetson-downloads-archived)
+
+    The Deepstream is required the Jetpack NVIDIA installed
+    https://developer.nvidia.com/embedded/
+
+## Install the DeepStream SDK
+    I preferred to use the tar file installation. 
+[Reference here](https://developer.nvidia.com/deepstream-getting-started )
+
+1. Download the DeepStream 5.1 Jetson tar package deepstream_sdk_v5.1.0_jetson.tbz2, to the Jetson device.
+    Go to follow link and check for deepstream SDK package. Choose the tar file download method.
+    
+2. Enter the following commands to extract and install the DeepStream SDK:
+``` python
+$ sudo tar -xvf deepstream_sdk_v5.1.0_jetson.tbz2 -C /
+$ cd /opt/nvidia/deepstream/deepstream-5.1
+$ sudo ./install.sh
+$ sudo ldconfig
+```
 ### Install librdkafka (to enable Kafka protocol adaptor for message broker)
 ``` python
 $ git clone https://github.com/edenhill/librdkafka.git
@@ -41,16 +62,5 @@ $ sudo make install
 $ sudo mkdir -p /opt/nvidia/deepstream/deepstream-5.1/lib
 $ sudo cp /usr/local/lib/librdkafka* /opt/nvidia/deepstream/deepstream-5.1/lib
 ``` 
-## Install the DeepStream SDK
-    I preferred to use the tar file installation. 
-1. Download the DeepStream 5.1 Jetson tar package deepstream_sdk_v5.1.0_jetson.tbz2, to the Jetson device.
-    Go to this link and download deepstream
-    <link> https://developer.nvidia.com/deepstream-getting-started </link>
-2. Enter the following commands to extract and install the DeepStream SDK:
-``` python
-$  sudo tar -xvf deepstream_sdk_v5.1.0_jetson.tbz2 -C /
-$ cd /opt/nvidia/deepstream/deepstream-5.1
-$ sudo ./install.sh
-$ sudo ldconfig
-```
+
 
