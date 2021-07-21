@@ -36,3 +36,8 @@ There are 3 choices for the alternative g++ (providing /usr/bin/g++).
 
 Press  to keep the current choice[*], or type selection number:
 ``` 
+### LINUX COMMAND:
+- **ldconfig**: 
+    ldconfig is a program that is used to maintain the shared library cache. This cache is typically stored in the file /etc/ld.so.cache and is used by the system to map a shared library name to the location of the corresponding shared library file
+   
+
